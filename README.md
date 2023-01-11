@@ -1,6 +1,6 @@
 # rustfck
 
-A brainfuck interpreter written in Rust 🦀
+A [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter, written in Rust 🦀
 
 
 ## How to run
