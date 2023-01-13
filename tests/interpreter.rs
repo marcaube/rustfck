@@ -1,6 +1,5 @@
 use std::process::Command;
 
-
 #[test]
 fn test_hello_world() {
     let output = Command::new("./target/debug/rustfck")
