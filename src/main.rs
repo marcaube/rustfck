@@ -1,10 +1,12 @@
 use rustfck::interpreter::Interpreter;
+use rustfck::lexer::Lexer;
 use std::{env, fs};
 
 fn main() {
-    let program =
-        fs::read(env::args().nth(1).unwrap()).expect("Please provide a source file to execute!");
+    let filename = env::args().nth(1).unwrap();
+    let program = fs::read(filename).expect("Please provide a source file to execute!");
 
-    let mut interpreter = Interpreter::new(program);
-    interpreter.run();
+    let tokens = Lexer::new(program).tokenize();
+
+    Interpreter::new(tokens).eval();
 }
