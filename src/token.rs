@@ -1,8 +1,8 @@
-#[derive(PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Token {
     Right,
     Left,
-    Add,
+    Add(u8),
     Sub,
     Output,
     Input,

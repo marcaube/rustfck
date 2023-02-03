@@ -8,5 +8,7 @@ fn main() {
 
     let tokens = Lexer::new(program).tokenize();
 
+    println!("{:?}", tokens);
+
     Interpreter::new(tokens).eval();
 }

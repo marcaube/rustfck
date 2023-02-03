@@ -16,7 +16,7 @@ impl Lexer {
             let token = match *c as char {
                 '>' => Token::Right,
                 '<' => Token::Left,
-                '+' => Token::Add,
+                '+' => Token::Add(1),
                 '-' => Token::Sub,
                 '.' => Token::Output,
                 ',' => Token::Input,

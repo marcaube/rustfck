@@ -30,8 +30,8 @@ impl Interpreter {
                 Token::Left => self.data_pointer -= 1,
 
                 // Increment (increase by one) the byte at the data pointer.
-                Token::Add => {
-                    self.memory[self.data_pointer] = self.memory[self.data_pointer].wrapping_add(1)
+                Token::Add(i) => {
+                    self.memory[self.data_pointer] = self.memory[self.data_pointer].wrapping_add(i)
                 }
 
                 // Decrement (decrease by one) the byte at the data pointer.
